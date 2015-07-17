@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.et4334.appofpetr.AboutActivity">
+
+    <TextView android:text="@string/about_version" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblVersion" />
+
+    <TextView
+        android:text="@string/about_version_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblVersionNo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/about_activity_storage_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblActivityStorageCount"
+        android:layout_below="@+id/lblVersion"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblActivityStorageCountVal"
+        android:layout_alignTop="@+id/lblActivityStorageCount"
+        android:layout_alignStart="@+id/lblVersionNo" />
+
+    <TextView
+        android:text="@string/about_activity_sqlite_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblActivitySqliteCount"
+        android:layout_below="@+id/lblActivityStorageCount"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblActivitySqliteCountVal"
+        android:layout_alignTop="@+id/lblActivitySqliteCount"
+        android:layout_alignStart="@+id/lblVersionNo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_button_ok"
+        android:id="@+id/btnOK"
+        android:layout_marginTop="16dp"
+        android:nestedScrollingEnabled="false"
+        android:onClick="btnOKClick"
+        android:layout_below="@+id/lblActivitySqliteCount"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

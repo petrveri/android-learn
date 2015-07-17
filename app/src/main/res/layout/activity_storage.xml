@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.et4334.appofpetr.StorageActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:enabled="true"
+            android:editable="true"
+            android:maxHeight="180dp" />
+
+    </ScrollView>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/scrollView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_rbn_internal_files"
+            android:id="@+id/rbnInternal"
+            android:layout_alignParentStart="true"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_rbn_internal_cache"
+            android:id="@+id/rbnInternalCache"
+            android:layout_below="@+id/rbnInternal"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_rbn_external_files"
+            android:id="@+id/rbnExternalFiles"
+            android:layout_below="@+id/rbnInternalCache"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/storage_rbn_external_storage"
+            android:id="@+id/rbnExternalStorage"
+            android:layout_below="@+id/rbnExternalFiles"
+            android:layout_alignParentStart="true" />
+    </RadioGroup>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_button_open_file"
+        android:id="@+id/btnOpenFile"
+        android:onClick="onClickBtnOpenFile"
+        android:enabled="true"
+        android:focusable="true"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toEndOf="@+id/radioGroup" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_button_save_file"
+        android:id="@+id/btnSaveFile"
+        android:onClick="onClickBtnSaveFile"
+        android:layout_alignTop="@+id/btnOpenFile"
+        android:layout_toEndOf="@+id/btnOpenFile" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_button_delete_file"
+        android:id="@+id/btnDeleteFile"
+        android:onClick="onClickBtnDeleteFile"
+        android:enabled="true"
+        android:focusable="true"
+        android:layout_below="@+id/btnOpenFile"
+        android:layout_toEndOf="@+id/radioGroup" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_button_list_file"
+        android:id="@+id/btnListFile"
+        android:onClick="onClickBtnListFile"
+        android:layout_alignTop="@+id/btnDeleteFile"
+        android:layout_toEndOf="@+id/btnDeleteFile" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtFileName"
+        android:layout_below="@+id/btnDeleteFile"
+        android:layout_alignStart="@+id/btnDeleteFile"
+        android:layout_alignEnd="@+id/btnListFile"
+        android:hint="@string/storage_edtFileName_hint" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_readable_external"
+        android:id="@+id/cboReadableExternal"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/storage_writable_external"
+        android:id="@+id/cboWritableExternal"
+        android:layout_alignTop="@+id/cboReadableExternal"
+        android:layout_toEndOf="@+id/cboReadableExternal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/cboReadableExternal"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView"
+            android:layout_alignParentStart="true" />
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" android:showAsAction="never" />
+    <item android:id="@+id/action_browser" android:title="@string/action_browser"
+        android:orderInCategory="101" android:showAsAction="never" />
+    <item android:id="@+id/action_storage" android:title="@string/action_storage"
+        android:orderInCategory="102" android:showAsAction="never" />
+    <item android:id="@+id/action_sqlite" android:title="@string/action_sqlite"
+        android:orderInCategory="103" android:showAsAction="never" />
+    <item android:id="@+id/action_calc" android:title="@string/action_calc"
+        android:orderInCategory="104" android:showAsAction="never" />
+    <item android:id="@+id/action_about" android:title="@string/action_about"
+        android:orderInCategory="105" android:showAsAction="never" />
+</menu>
